@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from '../components/Logo';
+import ThemeToggle from '../components/ThemeToggle';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,10 @@ export default function Navbar() {
           <Logo className="h-12" />
           
         </Link>
+        <div className="flex items-center gap-4">
+        {/* 🎯 👈 මෙන්න මෙතනින් තීම් බටන් එක වැටෙනවා */}
+        <ThemeToggle /> 
+      </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
