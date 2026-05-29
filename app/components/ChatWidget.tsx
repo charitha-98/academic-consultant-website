@@ -103,7 +103,7 @@ export default function ChatWidget() {
                 {m.role === 'assistant' && !isThinking && (
                   <div className="flex justify-start pl-1 animate-in fade-in duration-300">
                     <a
-                      href="https://wa.me/947XXXXXXXX" // 👈 මෙතනට ඔයාගේ ඇත්තම WhatsApp නම්බර් එක දාන්න මචං
+                      href="https://wa.me/94757114126" // 👈 මෙතනට ඔයාගේ ඇත්තම WhatsApp නම්බර් එක දාන්න මචං
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] font-bold px-3 py-1.5 rounded-xl shadow-sm transition-colors mt-1"
