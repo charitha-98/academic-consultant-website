@@ -88,16 +88,16 @@ export default function ServicesPage() {
         </div>
 
         {/* 📚 SUBJECT AREAS (මොබයිල් ෆික්ස් කරපු සුපිරි Glassmorphic Layout එක) */}
-        <div className="bg-white/70 dark:bg-slate-950/40 backdrop-blur-md p-6 sm:p-10 rounded-3xl border border-slate-200/40 dark:border-slate-800/40 shadow-sm mb-24 transition-colors duration-300">
+        <div className="bg-white/70 dark:bg-slate-950/40 backdrop-blur-md p-6 sm:p-10 rounded-3xl border-slate-200/40 dark:border-slate-800/40 shadow-sm mb-24 transition-colors duration-300">
           <h3 className="text-2xl font-bold text-slate-900 dark:text-white text-center font-serif mb-2">Major Disciplines We Cover</h3>
-          <p className="text-slate-500 dark:text-slate-400 text-center text-sm mb-10">Expert academic support across multiple specialized faculties.</p>
+          <p className="text-slate-500 dark:text-slate-100 text-center text-sm mb-10">Expert academic support across multiple specialized faculties.</p>
           
           {/* 🛠️ මෙතන grid-cols-1 දාලා sm:grid-cols-2 කරපු නිසා මොබයිල් එකේදී පිටතට පනින්නේ නැහැ මචං */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {subjects.map((sub, idx) => (
               <div 
                 key={idx} 
-                className="bg-slate-50/60 dark:bg-slate-900/40 p-4 sm:p-5 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex items-center gap-3.5 font-semibold text-slate-700 dark:text-slate-200 text-sm hover:bg-blue-50/50 dark:hover:bg-blue-950/30 hover:border-blue-200 dark:hover:border-blue-800 hover:text-blue-700 dark:hover:text-blue-400 transition-all duration-300 shadow-sm"
+                className="bg-slate-50/60 dark:bg-slate-900/40 p-4 sm:p-5 rounded-xl  border-slate-200/50 dark:border-slate-800/50 flex items-center gap-3.5 font-semibold text-slate-700 dark:text-slate-200 text-sm hover:bg-blue-50/50 dark:hover:bg-blue-950/30 hover:border-blue-200 dark:hover:border-blue-800 hover:text-blue-700 dark:hover:text-blue-400 transition-all duration-300 shadow-sm"
               >
                 {/* Icon wrapper එක shrink නොවෙන්න flex-shrink-0 එකක් දැම්මා */}
                 <span className="text-blue-600 dark:text-blue-400 text-lg flex-shrink-0 bg-blue-50 dark:bg-blue-950/60 p-2 rounded-lg">
