@@ -4,6 +4,13 @@ import {
   FaCheckDouble, FaArrowRight, FaLaptopCode, FaChartBar, FaStethoscope 
 } from 'react-icons/fa';
 
+
+export const metadata = {
+  title: 'Expert Academic Consultation & Assignment Help | AcademicAI',
+  description: 'Get 100% plagiarism-free assignment guidance, thesis formatting, and research proposal support from elite academic writers. Achieve A+ grades securely.',
+  keywords: ['assignment help', 'academic consultant', 'thesis writing help', 'research proposal', 'proofreading services'],
+};
+
 export default function ServicesPage() {
   
   const services = [

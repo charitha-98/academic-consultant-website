@@ -2,9 +2,15 @@ import Link from 'next/link';
 import { client } from '@/sanity/lib/client'; // 👈 ඔයාගේ සැනිටි ක්ලයන්ට් එක තියෙන පාත් එක චෙක් කරගන්න මචං (සාමාන්‍යයෙන් මේකයි)
 import { urlFor } from '@/sanity/lib/image';  // 👈 ඉමේජ් යූආර්එල් හදන එක
 
-export const revalidate = 60; // හැම විනාඩියකටම පස්සේ අලුත් ඩේටා ඔටෝ අප්ඩේට් වෙන්න (ISR)
+export const revalidate = 60; 
 
-// 🔍 Sanity එකෙන් Case Studies ඇදලා ගන්න GROQ Query එක
+export const metadata = {
+  title: 'Expert Academic Consultation & Assignment Help | AcademicAI',
+  description: 'Get 100% plagiarism-free assignment guidance, thesis formatting, and research proposal support from elite academic writers. Achieve A+ grades securely.',
+  keywords: ['assignment help', 'academic consultant', 'thesis writing help', 'research proposal', 'proofreading services'],
+};
+
+
 async function getCaseStudies() {
   const query = `*[_type == "caseStudy"] | order(_createdAt desc) {
     title,

@@ -5,9 +5,10 @@ import WhatsAppButton from "../components/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Expert Academic Assistance | Assignments, Projects & Theses",
-  description: "Get high-quality, plagiarism-free university assignments, research projects, and thesis writing assistance from an expert academic writer.",
+export const metadata = {
+  title: 'Expert Academic Consultation & Assignment Help | AcademicAI',
+  description: 'Get 100% plagiarism-free assignment guidance, thesis formatting, and research proposal support from elite academic writers. Achieve A+ grades securely.',
+  keywords: ['assignment help', 'academic consultant', 'thesis writing help', 'research proposal', 'proofreading services'],
 };
 
 export default function RootLayout({
