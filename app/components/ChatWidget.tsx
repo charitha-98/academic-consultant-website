@@ -11,7 +11,7 @@ export default function ChatWidget() {
 
   const isThinking = status === 'streaming' || status === 'submitted';
 
-  // 🎯 සිසුන්ට මුලින්ම පෙන්වන්න ඕනේ ප්‍රශ්න ටික (Quick Replies)
+  
   const quickReplies = [
     { label: '💰 Prices & Rates', text: 'How much do you charge for an assignment?' },
     { label: '🛡️ Plagiarism Free?', text: 'Do you provide plagiarism-free work and AI reports?' },
@@ -26,7 +26,7 @@ export default function ChatWidget() {
     }
   };
 
-  // 🖱️ Quick Reply බටන් එකක් ක්ලික් කරාම රන් වෙන Function එක
+ 
   const handleQuickReplyClick = (text: string) => {
     if (status === 'ready') {
       sendMessage({ text });
@@ -74,7 +74,7 @@ export default function ChatWidget() {
                   👋 Hi! I can help you with assignment structures, thesis advice, or guide you on getting custom academic expert help. Ask me anything!
                 </div>
                 
-                {/* 🎯 මුලින්ම පෙන්වන Quick Reply Buttons ටික */}
+                
                 <div className="space-y-2 px-2">
                   <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider mb-1">Suggested Questions:</p>
                   {quickReplies.map((reply, i) => (
@@ -99,11 +99,11 @@ export default function ChatWidget() {
                   </div>
                 </div>
 
-                {/* 🔗 AI එක උත්තරයක් දුන්නට පස්සේ ඒ මැසේජ් එක යටින් WhatsApp බටන් එකක් පෙන්වීම */}
+               
                 {m.role === 'assistant' && !isThinking && (
                   <div className="flex justify-start pl-1 animate-in fade-in duration-300">
                     <a
-                      href="https://wa.me/94757114126" // 👈 මෙතනට ඔයාගේ ඇත්තම WhatsApp නම්බර් එක දාන්න මචං
+                      href="https://wa.me/94757114126" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] font-bold px-3 py-1.5 rounded-xl shadow-sm transition-colors mt-1"
