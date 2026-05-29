@@ -62,7 +62,7 @@ export default function PolicyPage() {
             <p>If you have any questions regarding this privacy policy, feel free to reach out:</p>
             <div className="mt-3 text-blue-600 font-semibold">
               <p>📧 Email: contact@academicconsultant.com</p>
-              <p>💬 WhatsApp: +94 7X XXX XXXX</p>
+              <p>💬 WhatsApp: +94 75 711 4126</p>
             </div>
           </section>
 
