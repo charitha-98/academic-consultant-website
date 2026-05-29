@@ -27,10 +27,7 @@ export default function Navbar() {
           <Logo className="h-12" />
           
         </Link>
-        <div className="flex items-center gap-4">
-        {/* 🎯 👈 මෙන්න මෙතනින් තීම් බටන් එක වැටෙනවා */}
-        <ThemeToggle /> 
-      </div>
+        
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
@@ -57,6 +54,10 @@ export default function Navbar() {
 >
   Get Help
 </Link>
+<div className="flex items-center gap-4">
+        {/* 🎯 👈 මෙන්න මෙතනින් තීම් බටන් එක වැටෙනවා */}
+        <ThemeToggle /> 
+      </div>
         </div>
 
         {/* 📱 Mobile Hamburger Button */}
