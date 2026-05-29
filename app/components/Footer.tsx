@@ -4,7 +4,7 @@ import Logo from '../components/Logo';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-700 text-slate-400 border-t border-slate-800 pt-16 pb-8 px-6">
+    <footer className="bg-slate-700 text-slate-400 border-slate-800 pt-16 pb-8 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           
@@ -29,7 +29,7 @@ export default function Footer() {
               <Link href="https://wa.me/94757114126" target="_blank" className="hover:text-white transition-all text-emerald-400 font-medium">WhatsApp</Link>
               <Link href="/blog" className="hover:text-white transition-all">Blog</Link>
               <Link href="/policy" className="hover:text-white transition-all">
-  Privacy Policy & Terms
+  Policy & Terms
 </Link>
             </div>
           </div>
