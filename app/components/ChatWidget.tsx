@@ -61,12 +61,13 @@ export default function ChatWidget() {
               </div>
             )}
             {messages.map((m) => (
-              <div key={m.id} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[80%] rounded-2xl p-3 text-xs leading-relaxed ${m.role === 'user' ? 'bg-blue-600 text-white rounded-tr-none' : 'bg-white border border-slate-200 text-slate-800 rounded-tl-none shadow-sm'}`}>
-                  {m.parts.map((part, index) => part.type === 'text' ? <span key={index}>{part.text}</span> : null)}
-                </div>
-              </div>
-            ))}
+  <div key={m.id} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+    {/* 👈 මෙන්න පල්ලෙහා div එකේ whitespace-pre-line කියන එක ඇඩ් කරා මಚං */}
+    <div className={`max-w-[80%] rounded-2xl p-3 text-xs leading-relaxed whitespace-pre-line ${m.role === 'user' ? 'bg-blue-600 text-white rounded-tr-none' : 'bg-white border border-slate-200 text-slate-800 rounded-tl-none shadow-sm'}`}>
+      {m.parts.map((part, index) => part.type === 'text' ? <span key={index}>{part.text}</span> : null)}
+    </div>
+  </div>
+))}
             {isThinking && (
               <div className="flex justify-start">
                 <div className="bg-white border border-slate-200 rounded-2xl rounded-tl-none p-3 text-slate-400 text-xs flex items-center gap-1 shadow-sm">
