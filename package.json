@@ -9,10 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^3.0.66",
+    "@ai-sdk/react": "^3.0.193",
     "@portabletext/react": "^6.2.0",
     "@sanity/icons": "^3.7.4",
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^5.27.0",
+    "ai": "^6.0.191",
     "next": "16.2.6",
     "next-sanity": "^13.0.4",
     "react": "19.2.4",
