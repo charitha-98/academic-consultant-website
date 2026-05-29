@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Logo from '../components/Logo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ export default function Navbar() {
         
         {/* Logo / Brand Name */}
         <Link href="/" className="flex items-center gap-2.5 text-blue-900 font-serif font-bold text-lg md:text-xl">
-          <span className="bg-blue-600 text-white p-2 rounded-xl">🎓</span>
+          <Logo className="h-10" />
           Academic Consultant
         </Link>
 
