@@ -5,9 +5,8 @@ import { useChat } from '@ai-sdk/react';
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const [input, setInput] = useState(''); // 👈 අලුත් SDK එකේ input එක සාමාන්‍ය React State එකක් විදිහට ගන්නවා
+  const [input, setInput] = useState('');
   
-  // 👈 Version 6 එකේ useChat එකෙන් ලැබෙන්නේ මේ ටික විතරයි මචං
   const { messages, sendMessage, status } = useChat();
 
   const isThinking = status === 'streaming' || status === 'submitted';
@@ -15,23 +14,23 @@ export default function ChatWidget() {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (input.trim() && status === 'ready') {
-      sendMessage({ text: input }); // 👈 මැසේජ් එක යවන්නේ මෙහෙමයි
-      setInput(''); // Input එක clear කිරීම
+      sendMessage({ text: input });
+      setInput('');
     }
   };
 
   return (
     <div className="fixed bottom-6 right-6 z-50 font-sans">
-      {/* Floating Button */}
+      {/* Floating Button (දැන් පට්ට Clean වටකුරු Icon එකක් විතරයි මචං) */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all flex items-center justify-center gap-2 hover:scale-105"
+          // 👈 මෙතන p-4 එක්ක w-14 h-14 දාලා බටන් එක නියම සර්කල් එකක් කරා මචං
+          className="bg-blue-600 hover:bg-blue-700 text-white w-14 h-14 rounded-full shadow-lg transition-all flex items-center justify-center hover:scale-105"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z" />
           </svg>
-          <span className="text-sm font-bold pr-1">Chat with Expert</span>
         </button>
       )}
 
@@ -64,7 +63,6 @@ export default function ChatWidget() {
             {messages.map((m) => (
               <div key={m.id} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div className={`max-w-[80%] rounded-2xl p-3 text-xs leading-relaxed ${m.role === 'user' ? 'bg-blue-600 text-white rounded-tr-none' : 'bg-white border border-slate-200 text-slate-800 rounded-tl-none shadow-sm'}`}>
-                  {/* 👈 Version 6 එකේ content එක පෙන්වන්නේ මෙහෙම parts වලට map කරලා මචං */}
                   {m.parts.map((part, index) => part.type === 'text' ? <span key={index}>{part.text}</span> : null)}
                 </div>
               </div>
