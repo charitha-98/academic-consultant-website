@@ -19,7 +19,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm w-full">
+    <nav className="absolute top-0 left-0 w-full z-50 flex items-center justify-between p-5 bg-transparent transition-colors">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         
         {/* Logo / Brand Name */}
