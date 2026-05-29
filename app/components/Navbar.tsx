@@ -23,8 +23,8 @@ export default function Navbar() {
         
         {/* Logo / Brand Name */}
         <Link href="/" className="flex items-center gap-2.5 text-blue-900 font-serif font-bold text-lg md:text-xl">
-          <Logo className="h-10" />
-          Academic Consultant
+          <Logo className="h-12" />
+          
         </Link>
 
         {/* Desktop Menu */}

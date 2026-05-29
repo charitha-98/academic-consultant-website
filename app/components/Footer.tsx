@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FaGraduationCap, FaLock, FaCheckCircle, FaWhatsapp } from 'react-icons/fa';
+import Logo from '../components/Logo';
 
 export default function Footer() {
   return (
@@ -10,8 +11,7 @@ export default function Footer() {
           {/* Column 1: Brand Info */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2.5 text-white font-serif font-bold text-xl">
-              <span className="bg-blue-600 text-white p-2 rounded-xl"><FaGraduationCap size={20} /></span>
-              Academic Consultant
+               <Logo className="h-12" />
             </Link>
             <p className="text-sm leading-relaxed text-slate-400">
               Premium university assignment assistance, research modeling, and dissertation mentorship with absolute deadline protection.
